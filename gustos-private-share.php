@@ -13,18 +13,20 @@ Domain Path: /lang
 define('SPRG_VERSION', '1.0.0');
 
 /* No direct access allowed!
----------------------------------*/
+---------------------------------------------------------------------------- */
 if ( ! defined('ABSPATH')) {
     exit;
 }
 
 /* Plugin constants
-------------------------*/
+---------------------------------------------------------------------------- */
 define('SPRG_PLUGIN_FILE', __FILE__);
 define('SPRG_PLUGIN_BASENAME', plugin_basename(__FILE__));
 define('SPRG_PATH', plugin_dir_path(__FILE__));
 define('SPRG_URL', plugin_dir_url(__FILE__));
 
+/* Hook after the classes from "Gustos" theme are loaded
+---------------------------------------------------------------------------- */
 add_action('gustos_autoload', function () {
     Awps\Loader::loadClasses(SPRG_PATH . 'src', 'GustosPrivateShare');
 
