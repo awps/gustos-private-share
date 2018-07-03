@@ -4,8 +4,7 @@ use GustosPrivateShare\Display;
 use GustosPrivateShare\Localize;
 use GustosPrivateShare\Modifier;
 
-/* No direct access allowed!
----------------------------------*/
+// No direct access allowed!
 if ( ! defined('ABSPATH')) {
     exit;
 }
